@@ -1,0 +1,51 @@
+
+<main class="resume">
+
+  <header class="intro">
+    <p class="eyebrow">✦ Welcome to my little universe ✦</p>
+
+    <h1>{{ fullName }}</h1>
+
+    <p class="subtitle">
+      Web Developer • UI/UX Enthusiast
+    </p>
+
+    <p class="contact">
+      {{ location }} |
+      {{ phone }} |
+      <a [href]="'mailto:' + email">{{ email }}</a>
+    </p>
+  </header>
+
+  <section class="content-card">
+    <h2>✧ Personal Profile</h2>
+    <p>{{ profile }}</p>
+  </section>
+
+  <app-profile-card></app-profile-card>
+
+  <section class="content-card">
+    <h2>✧ My Tech Stack</h2>
+
+    <ul class="skills-list">
+      @for (skill of skills; track skill) {
+        <li>✦ {{ skill }}</li>
+      }
+    </ul>
+  </section>
+
+  <section class="content-card interaction">
+    <h2>✧ A Little Interaction</h2>
+
+    <p>{{ message }}</p>
+
+    <button (click)="showMessage()">
+      ✦ Click Me
+    </button>
+  </section>
+
+  <footer class="footer">
+    ✦ Made with Angular ✦
+  </footer>
+
+</main>
